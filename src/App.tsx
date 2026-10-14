@@ -13,6 +13,7 @@ import Benefits from './components/Benefits'
 import NoticeBox from './components/NoticeBox'
 import Footer from './components/Footer'
 import Fab from './components/Fab'
+import ScenarioSwitch from './components/ScenarioSwitch'
 import styles from './App.module.css'
 
 // ?state=none 으로 열면 미발급 상태부터 시작
@@ -22,7 +23,7 @@ function initialScenario(): ScenarioKey {
 }
 
 export default function App() {
-  const [scenarioKey] = useState<ScenarioKey>(initialScenario)
+  const [scenarioKey, setScenarioKey] = useState<ScenarioKey>(initialScenario)
   const [tab, setTab] = useState<TabKey>('구독')
   const s = scenarios[scenarioKey]
 
@@ -64,6 +65,7 @@ export default function App() {
 
       <Footer />
       <Fab />
+      <ScenarioSwitch value={scenarioKey} onChange={setScenarioKey} />
     </div>
   )
 }
