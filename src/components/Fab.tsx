@@ -1,4 +1,4 @@
-import menuIcon from '../assets/icons/menu.svg'
+import menuIcon from '../assets/figma-6953-32421/menu.svg'
 import styles from './Fab.module.css'
 
 export default function Fab() {

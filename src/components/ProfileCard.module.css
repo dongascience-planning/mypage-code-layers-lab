@@ -10,9 +10,17 @@
 
 .top {
   display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.info {
+  display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 10px;
-  padding: 0 8px;
+  min-width: 0;
 }
 
 .greeting {
@@ -41,6 +49,13 @@
   list-style: none;
 }
 
+.grade {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -52,8 +67,11 @@
   white-space: nowrap;
 }
 
-.subscriber { background: var(--mypage-primary); color: #fff; }
-.basic { background: #555; color: #fff; }
+.all { border: 1px solid #5143e3; background: #f3f2fd; color: #5143e3; }
+.basic { border: 1px solid #41b5c6; background: #eff6f9; color: #41b5c6; }
+.general { background: #555; color: #fff; }
+.smart { background: var(--gradient-smart); color: #fff; }
+.smart sup { font-size: 8px; line-height: 0; }
 
 .family {
   padding: 2px 11px;
@@ -149,4 +167,16 @@
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .grade {
+    flex-basis: 88px;
+    width: 88px;
+    height: 88px;
+  }
+
+  .pill {
+    padding-inline: 9px;
+  }
 }

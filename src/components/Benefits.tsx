@@ -1,7 +1,7 @@
 import { benefits } from '../data/mock'
-import logoLibrary from '../assets/images/logo-dlibrary.png'
-import logoAir from '../assets/images/logo-air.png'
-import cover from '../assets/images/cover-sample.png'
+import logoLibrary from '../assets/figma-6953-32421/logo-dlibrary.svg'
+import logoAir from '../assets/figma-6953-32421/logo-air.svg'
+import cover from '../assets/figma-6953-32421/recent-content.png'
 import styles from './Benefits.module.css'
 
 export default function Benefits() {

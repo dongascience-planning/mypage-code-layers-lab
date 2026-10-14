@@ -6,7 +6,7 @@
 export type ScenarioKey = 'issued' | 'none'
 
 export type MemberBadge =
-  | { kind: 'member'; label: string; tone: 'subscriber' | 'basic' }
+  | { kind: 'member'; label: string; tone: 'all' | 'basic' | 'smart' | 'general' }
   | { kind: 'family'; label: string }
   | { kind: 'auth'; label: string }
 
@@ -18,7 +18,7 @@ export type Child = { id: string; name: string; status: string; tone: 'blue' | '
 
 export type Scenario = {
   label: string
-  user: { name: string; badges: MemberBadge[]; points: number; coupons: number }
+  user: { name: string; badges: MemberBadge[]; points: number; coupons: number; grade?: 'silver' }
   subscriptions: Subscription[]
   /** 두 번째 배너: 기자증이 있으면 확인, 없으면 기자단 가입 유도 */
   reporterBanner: 'myCard' | 'join'
@@ -37,20 +37,23 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
   issued: {
     label: '기자증 발급',
     user: {
-      name: '홍길동',
+      name: '김동희',
       badges: [
-        { kind: 'member', label: '정기구독 회원', tone: 'subscriber' },
-        { kind: 'family', label: '자녀' },
+        { kind: 'member', label: 'All 패스', tone: 'all' },
+        { kind: 'member', label: 'Basic 패스', tone: 'basic' },
+        { kind: 'member', label: 'Smart+ 회원', tone: 'smart' },
+        { kind: 'family', label: '부모' },
       ],
       points: 1800,
       coupons: 2,
+      grade: 'silver',
     },
     subscriptions: [
       { id: 'math', name: '수학동아 어린이', slogan: ['지구 최강 재미,', '우주 1등 사고력'] },
       { id: 'sci', name: '과학동아', slogan: ['과학을 느끼는 즐거움,', '미래를 보는 창'] },
       { id: 'kids', name: '어린이과학동아', slogan: ['웃기는 과학,', '똑똑한 만화'] },
     ],
-    reporterBanner: 'myCard',
+    reporterBanner: 'join',
     literacyWorksheets: worksheets,
     bookmarkWorksheets: worksheets,
     children: [
@@ -63,7 +66,7 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
     user: {
       name: '홍길동',
       badges: [
-        { kind: 'member', label: '일반 회원', tone: 'basic' },
+        { kind: 'member', label: '일반 회원', tone: 'general' },
         { kind: 'auth', label: '정기구독인증' },
       ],
       points: 1800,

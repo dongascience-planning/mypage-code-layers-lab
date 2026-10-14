@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import chevronUp from '../assets/icons/chevron-up-14.svg'
-import escrow from '../assets/images/escrow.png'
+import escrow from '../assets/figma-6953-32421/escrow.png'
 import styles from './Footer.module.css'
 
 const MENU = ['회사소개', '저작권 · 콘텐츠 이용안내', '개인정보 처리방침', '광고안내', '고객센터', '입점신청']

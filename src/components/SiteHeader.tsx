@@ -1,16 +1,12 @@
-import logoDs from '../assets/images/logo-ds.png'
-import appPopcorn from '../assets/images/app-popcornplanet.png'
-import appJisatam from '../assets/images/app-jisatam.png'
+import appPopcorn from '../assets/figma-6953-32421/app-popcorn.svg'
+import appHeart from '../assets/figma-6953-32421/app-heart.svg'
 import styles from './SiteHeader.module.css'
 
-const GNB = ['뉴스', 'd라이브러리', 'AIR', 'DS스토어']
+const GNB = ['동아사이언스', '뉴스', '라이브러리', 'AI', '스토어']
 
 export default function SiteHeader() {
   return (
     <header className={styles.header}>
-      <div className={styles.logoRow}>
-        <img src={logoDs} width={92} height={28} alt="동아사이언스" />
-      </div>
       <nav className={styles.gnb}>
         <ul className={styles.internal}>
           {GNB.map((item) => (
@@ -21,10 +17,10 @@ export default function SiteHeader() {
         </ul>
         <div className={styles.external}>
           <a href="#" className={styles.app}>
-            <img src={appPopcorn} width={32} height={32} alt="팝콘플래닛" />
+            <img className={styles.popcorn} src={appPopcorn} width={21} height={14} alt="팝콘플래닛" />
           </a>
           <a href="#" className={styles.app}>
-            <img src={appJisatam} width={32} height={32} alt="지사탐" />
+            <img src={appHeart} width={16} height={16} alt="지사탐" />
           </a>
         </div>
       </nav>

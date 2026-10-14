@@ -1,4 +1,4 @@
-import bellIcon from '../assets/icons/bell.svg'
+import bellIcon from '../assets/figma-6953-32421/notice-bell.svg'
 import styles from './NoticeBox.module.css'
 
 export default function NoticeBox({ text }: { text: string }) {

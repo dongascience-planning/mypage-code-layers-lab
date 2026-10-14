@@ -3,6 +3,7 @@ import authBadgeIcon from '../assets/icons/auth-badge.svg'
 import chevronPoint from '../assets/icons/chevron-10-point.svg'
 import chevronCoupon from '../assets/icons/chevron-10-coupon.svg'
 import chevronWhite from '../assets/icons/chevron-10-white.svg'
+import silverBadge from '../assets/figma-6953-32421/profile-silver.png'
 import styles from './ProfileCard.module.css'
 
 type Props = { user: Scenario['user'] }
@@ -11,30 +12,37 @@ export default function ProfileCard({ user }: Props) {
   return (
     <section className={styles.card} aria-label="회원 정보">
       <div className={styles.top}>
-        <p className={styles.greeting}>
-          <span className={styles.nameLine}>
-            <strong className={styles.name}>{user.name}</strong>님,
-          </span>
-          <span>반갑습니다! 👋</span>
-        </p>
-        <ul className={styles.badges}>
-          {user.badges.map((b) => (
-            <li key={b.label}>
-              {b.kind === 'member' && (
-                <span className={`${styles.pill} ${b.tone === 'subscriber' ? styles.subscriber : styles.basic}`}>
-                  {b.label}
-                </span>
-              )}
-              {b.kind === 'family' && <span className={`${styles.pill} ${styles.family}`}>{b.label}</span>}
-              {b.kind === 'auth' && (
-                <button className={styles.auth}>
-                  <img src={authBadgeIcon} width={24} height={24} alt="" />
-                  {b.label}
-                </button>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.info}>
+          <p className={styles.greeting}>
+            <span className={styles.nameLine}>
+              <strong className={styles.name}>{user.name}</strong>님,
+            </span>
+            <span>반갑습니다! 👋</span>
+          </p>
+          <ul className={styles.badges}>
+            {user.badges.map((b) => (
+              <li key={b.label}>
+                {b.kind === 'member' && (
+                  <span className={`${styles.pill} ${styles[b.tone]}`}>
+                    {b.label === 'Smart+ 회원' ? (
+                      <>
+                        Smart<sup>+</sup> 회원
+                      </>
+                    ) : b.label}
+                  </span>
+                )}
+                {b.kind === 'family' && <span className={`${styles.pill} ${styles.family}`}>{b.label}</span>}
+                {b.kind === 'auth' && (
+                  <button className={styles.auth}>
+                    <img src={authBadgeIcon} width={24} height={24} alt="" />
+                    {b.label}
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        {user.grade && <img className={styles.grade} src={silverBadge} width={120} height={120} alt="실버 등급" />}
       </div>
 
       <div className={styles.wallet}>

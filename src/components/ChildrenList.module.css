@@ -14,10 +14,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 4px;
+  justify-content: flex-start;
+  gap: 20px;
   flex-shrink: 0;
   width: 186px;
+  min-height: 156px;
   padding: 24px 20px;
   border-radius: 12px;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.05));
@@ -25,6 +26,11 @@
 
 .blue { background: linear-gradient(-45.87deg, #eff7ff 2.75%, #dcedff 100%); }
 .violet { background: linear-gradient(-45.87deg, #f3f1ff 2.75%, #eae6ff 100%); }
+
+.childName {
+  display: flex;
+  align-items: center;
+}
 
 .name {
   font-size: 18px;
@@ -34,22 +40,48 @@
   color: #000;
 }
 
-.status {
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.childLink {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 28px;
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.4;
-  color: var(--neutral-900);
+  letter-spacing: -0.14px;
+  color: #111;
   white-space: nowrap;
+}
+
+.newBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-smart);
+  font-size: 8px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .add {
   align-items: center;
-  min-height: 100px;
+  justify-content: center;
   border: 1px dashed #ccc;
   background: #fff;
 }
 
 .addBtn {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 4px;
   font-size: 14px;

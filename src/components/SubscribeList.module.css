@@ -1,6 +1,7 @@
 .list {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8,29 +9,22 @@
 
 .item {
   display: flex;
+  flex: 0 1 160px;
   flex-direction: column;
-  gap: 14px;
-  width: 100px;
+  gap: 16px;
+  min-width: 0;
 }
 
-.thumb {
+.cover {
+  width: 100%;
+  aspect-ratio: 160 / 209.778;
+  object-fit: cover;
+}
+
+.bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  height: 131px;
-  background: #f7f7f7;
-}
-
-/* 시안 폰트는 Sandoll GothicNeo2 — Pretendard 대체 */
-.slogan {
-  width: 96px;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: -0.2px;
-  color: var(--text-body);
-  text-align: center;
+  gap: 10px;
 }
 
 .btn {
@@ -39,11 +33,29 @@
   justify-content: center;
   height: 40px;
   padding: 8px;
-  border: 1px solid #333;
+  border: 1px solid currentColor;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
-  color: #333;
   white-space: nowrap;
+}
+
+.soon { color: #888; }
+.retry { color: #1b43aa; }
+.quiz { color: #6d2ef2; }
+
+.date {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--neutral-900);
+}
+
+@media (max-width: 420px) {
+  .list { gap: 10px; }
+  .item { gap: 10px; }
+  .btn { height: 32px; padding: 4px; font-size: 12px; }
+  .date { font-size: 12px; }
 }

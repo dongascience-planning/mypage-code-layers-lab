@@ -33,6 +33,63 @@
   right: 0;
 }
 
+.familyArt,
+.reporterArt {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 128px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.air {
+  position: absolute;
+  left: 45px;
+  top: 12px;
+  width: 79px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.twinkle {
+  position: absolute;
+  object-fit: cover;
+}
+
+.twinkleOne {
+  left: 106px;
+  top: 39px;
+  width: 18px;
+  height: 22px;
+}
+
+.twinkleTwo {
+  left: 59px;
+  top: 17px;
+  width: 17px;
+  height: 14px;
+  transform: rotate(90deg);
+}
+
+.alpaca {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  width: 52px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.chameleon {
+  position: absolute;
+  left: 64px;
+  top: 16px;
+  width: 44px;
+  height: 80px;
+  object-fit: cover;
+}
+
 .family {
   background: linear-gradient(157.94deg, #0088ff 11.8%, #36e1ff 91.11%);
   color: #fff;
