@@ -1,0 +1,27 @@
+.group {
+  display: flex;
+  width: 100%;
+  max-width: var(--page-max);
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-strong);
+}
+
+.on { font-weight: 800; }
+
+.dot {
+  position: absolute;
+  top: calc(50% - 14.5px);
+  left: calc(50% + 0.5px);
+  transform: translate(-50%, -50%);
+}

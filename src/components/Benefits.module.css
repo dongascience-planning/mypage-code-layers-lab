@@ -1,0 +1,117 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.05)) drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.08));
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 6px 24px;
+}
+
+.library { background: #41b5c6; }
+.air { background: #6a4ef1; }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: #fff;
+}
+
+.titBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tit {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--text-strong);
+}
+
+.note {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #888;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cover {
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #f2f2f2;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.text {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.series {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #444;
+}
+
+.series small { font-size: 12px; }
+
+.headline {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-body);
+}
+
+.author {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-sub);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 5px;
+}
+
+.tag {
+  padding: 2px 12px;
+  border-radius: 20px;
+  background: #f2f0fe;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #5946b4;
+}

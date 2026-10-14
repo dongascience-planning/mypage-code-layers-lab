@@ -1,0 +1,59 @@
+/* 카드가 화면보다 넓어 가로 스크롤 */
+.row {
+  display: flex;
+  gap: 16px;
+  margin: 0 -20px;
+  padding: 0 20px 4px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.row::-webkit-scrollbar { display: none; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 186px;
+  padding: 24px 20px;
+  border-radius: 12px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.05));
+}
+
+.blue { background: linear-gradient(-45.87deg, #eff7ff 2.75%, #dcedff 100%); }
+.violet { background: linear-gradient(-45.87deg, #f3f1ff 2.75%, #eae6ff 100%); }
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+
+.status {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--neutral-900);
+  white-space: nowrap;
+}
+
+.add {
+  align-items: center;
+  min-height: 100px;
+  border: 1px dashed #ccc;
+  background: #fff;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--text-muted);
+}

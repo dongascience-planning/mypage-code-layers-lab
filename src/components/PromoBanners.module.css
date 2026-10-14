@@ -1,0 +1,50 @@
+/* 콘텐츠 영역 좌우 패딩(20px)을 넘어 화면 끝까지 */
+.group {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 24px 20px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.art {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.family {
+  background: linear-gradient(157.94deg, #0088ff 11.8%, #36e1ff 91.11%);
+  color: #fff;
+}
+
+.myCard {
+  background: linear-gradient(60.88deg, #3149ff 0%, #2b7fff 100%);
+  color: #fff;
+}
+
+.join {
+  padding-right: 16px;
+  background: #fdd808;
+  color: var(--neutral-900);
+}

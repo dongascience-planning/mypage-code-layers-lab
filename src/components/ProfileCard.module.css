@@ -1,0 +1,152 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: var(--page-max);
+  min-width: 360px;
+  padding: 16px 24px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 8px;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--neutral-900);
+}
+
+.nameLine { display: flex; align-items: flex-end; }
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.subscriber { background: var(--mypage-primary); color: #fff; }
+.basic { background: #555; color: #fff; }
+
+.family {
+  padding: 2px 11px;
+  border: 1px solid var(--family-blue);
+  background: #fff;
+  color: var(--family-blue);
+}
+
+.auth {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding-right: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--neutral-900);
+}
+
+.wallet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: inset 0 -2px 6px rgba(111, 0, 255, 0.24);
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.1));
+}
+
+.half {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 0 16px;
+}
+
+.tit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.gradText {
+  background-image: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.4;
+}
+
+.value b { font-size: 24px; font-weight: 700; }
+.value small { font-size: 20px; font-weight: 400; }
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-image: var(--gradient-text);
+  opacity: 0.5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action {
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: rgba(109, 46, 242, 0.2);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}

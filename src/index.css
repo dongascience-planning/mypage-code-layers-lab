@@ -1,0 +1,52 @@
+/* Design tokens — Figma 변수명 기준 (260825 자녀등록유도 시안) */
+:root {
+  --neutral-900: #212121;
+  --neutral-600: #757575;
+  --neutral-500: #9e9e9e;
+  --neutral-300: #e0e0e0;
+  --neutral-200: #eeeeee;
+  --neutral-100: #fafafa;
+  --gray-800: #424242;
+  --text-strong: #111;
+  --text-body: #222;
+  --text-sub: #666;
+  --text-muted: #777;
+
+  --mypage-primary: #ff4084;
+  --mypage-secondary: #6d2ef2;
+  --family-blue: #0e70c0;
+
+  --gradient-smart: linear-gradient(90deg, #cd3ec7 0%, #6757fe 50%, #2d8efa 100%);
+  --gradient-text: linear-gradient(136.85deg, #cd3ec7 6.35%, #6757fe 48.5%, #2d8efa 90.64%);
+  --gradient-top: linear-gradient(125.02deg, #f0d4ff 0%, #a8b0ff 105.32%);
+
+  --shadow-card: 0 -2px 2px rgba(0, 0, 0, 0.05), 0 2px 2px rgba(0, 0, 0, 0.05);
+
+  --page-max: 600px;
+  --font: 'Pretendard Variable', Pretendard, -apple-system, 'Noto Sans KR', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  font-family: var(--font);
+  color: var(--neutral-900);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+p { margin: 0; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+img { display: block; }

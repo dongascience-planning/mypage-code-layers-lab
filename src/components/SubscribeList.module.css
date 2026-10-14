@@ -1,0 +1,49 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100px;
+}
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 131px;
+  background: #f7f7f7;
+}
+
+/* 시안 폰트는 Sandoll GothicNeo2 — Pretendard 대체 */
+.slogan {
+  width: 96px;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  color: var(--text-body);
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+  white-space: nowrap;
+}

@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.white {
+  padding: 32px 40px 24px;
+  background: #fff;
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.05)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.05));
+}
+
+.gray {
+  padding: 40px 40px 32px;
+  background: #f9f9f9;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* 시안 폰트는 NEXON Lv1 Gothic Bold — 웹폰트 미탑재로 Pretendard Bold 대체 */
+.message {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.15px;
+  color: #333;
+  text-align: center;
+}
+
+.messagePlain {
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.fixed { width: 200px; }
+.auto { padding: 0 24px; height: 45px; }
+
+.outlineDark { border: 1px solid #333; color: #333; }
+.outlinePink { border: 1px solid var(--mypage-primary); color: var(--mypage-primary); }
+.outlinePurple { border: 1px solid var(--mypage-secondary); color: var(--mypage-secondary); }
+.gradient { background: var(--gradient-smart); color: #fff; }
