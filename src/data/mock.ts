@@ -38,7 +38,7 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
   issued: {
     label: '기자증 발급',
     user: {
-      name: '김동희',
+      name: '홍길동',
       badges: [
         { kind: 'member', label: 'All 패스', tone: 'all' },
         { kind: 'member', label: 'Basic 패스', tone: 'basic' },
@@ -59,8 +59,8 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
     literacyWorksheets: worksheets,
     bookmarkWorksheets: worksheets,
     children: [
-      { id: 'c1', name: '김첫째', status: '과학동아/진행 중', tone: 'blue' },
-      { id: 'c2', name: '김둘째', status: '어린이과학동아/진행 중', tone: 'violet' },
+      { id: 'c1', name: '홍첫째', status: '과학동아/진행 중', tone: 'blue' },
+      { id: 'c2', name: '홍둘째', status: '어린이과학동아/진행 중', tone: 'violet' },
     ],
   },
   none: {
