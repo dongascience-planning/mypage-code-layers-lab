@@ -27,12 +27,6 @@
   white-space: nowrap;
 }
 
-.art {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .familyArt,
 .reporterArt {
   position: absolute;
@@ -42,6 +36,29 @@
   height: 80px;
   overflow: hidden;
 }
+
+.pressArt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.pressArt img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 128px;
+  height: 100px;
+  object-fit: cover;
+  object-position: bottom;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.mobileReporter { display: none; }
 
 .air {
   position: absolute;
@@ -104,4 +121,13 @@
   padding-right: 16px;
   background: #fdd808;
   color: var(--neutral-900);
+}
+
+@media (max-width: 599px) {
+  .desktopReporter { display: none; }
+  .mobileReporter { display: flex; }
+}
+
+@media (max-width: 359px) {
+  .title { font-size: 14px; }
 }

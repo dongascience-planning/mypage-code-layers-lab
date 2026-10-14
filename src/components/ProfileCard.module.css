@@ -56,6 +56,8 @@
   object-fit: cover;
 }
 
+.mobileBadges { display: none; }
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -72,6 +74,8 @@
 .general { background: #555; color: #fff; }
 .smart { background: var(--gradient-smart); color: #fff; }
 .smart sup { font-size: 8px; line-height: 0; }
+.subscriber { background: var(--mypage-primary); color: #fff; }
+.mobileFamily { border: 1px solid var(--family-blue); background: #fff; color: var(--family-blue); }
 
 .family {
   padding: 2px 11px;
@@ -169,14 +173,9 @@
   white-space: nowrap;
 }
 
-@media (max-width: 420px) {
-  .grade {
-    flex-basis: 88px;
-    width: 88px;
-    height: 88px;
-  }
-
-  .pill {
-    padding-inline: 9px;
-  }
+@media (max-width: 599px) {
+  .card { min-width: 0; }
+  .grade, .desktopBadges { display: none; }
+  .mobileBadges { display: flex; }
+  .top { align-items: flex-start; }
 }

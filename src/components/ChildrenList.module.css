@@ -46,6 +46,8 @@
   gap: 2px;
 }
 
+.mobileStatus { display: none; }
+
 .childLink {
   display: flex;
   align-items: center;
@@ -88,4 +90,21 @@
   font-weight: 700;
   line-height: 1.5;
   color: var(--text-muted);
+}
+
+@media (max-width: 599px) {
+  .card {
+    min-height: 100px;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  .childGrade, .desktopDetails { display: none; }
+  .mobileStatus {
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--neutral-900);
+    white-space: nowrap;
+  }
 }

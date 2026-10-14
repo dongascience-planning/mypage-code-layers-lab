@@ -32,9 +32,9 @@ export default function ChildrenList({ items }: Props) {
         <li key={child.id} className={`${styles.card} ${styles[child.tone]}`}>
           <div className={styles.childName}>
             <p className={styles.name}>{child.name}</p>
-            <img src={silverBadge} width={28} height={28} alt="실버 등급" />
+            <img className={styles.childGrade} src={silverBadge} width={28} height={28} alt="실버 등급" />
           </div>
-          <div className={styles.links}>
+          <div className={`${styles.links} ${styles.desktopDetails}`}>
             <button className={styles.childLink}>
               {index === 0 && <span className={styles.newBadge}>N</span>}
               <img src={reportIcon} width={16} height={16} alt="" />
@@ -47,6 +47,7 @@ export default function ChildrenList({ items }: Props) {
               <img src={chevronRight} width={12} height={12} alt="" />
             </button>
           </div>
+          <p className={styles.mobileStatus}>{child.status}</p>
         </li>
       ))}
       <li className={`${styles.card} ${styles.add}`}>

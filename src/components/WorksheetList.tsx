@@ -2,8 +2,8 @@ import type { Worksheet } from '../data/mock'
 import newPink from '../assets/icons/new-pink.svg'
 import newPurple from '../assets/icons/new-purple.svg'
 import EmptyCard from './EmptyCard'
-import literacyArt from '../assets/images/empty-literacy.png'
-import bookmarkArt from '../assets/images/empty-bookmark.png'
+import literacyArt from '../assets/figma-mobile/empty-literacy.png'
+import bookmarkArt from '../assets/figma-mobile/empty-bookmark.svg'
 import styles from './WorksheetList.module.css'
 
 type Props = {

@@ -1,11 +1,12 @@
 /* 모바일 360 기준, 넓은 화면에서는 600px 칼럼으로 가운데 정렬 (PC 시안 Main/pc 동일 구조) */
 .page {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: var(--page-max);
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   background: #fff;
   overflow-x: clip;

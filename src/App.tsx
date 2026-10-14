@@ -41,7 +41,7 @@ export default function App() {
           <SubscribeList items={s.subscriptions} />
         </Section>
 
-        <PromoBanners reporter={s.reporterBanner} />
+        <PromoBanners reporter={s.reporterBanner} mobileReporter={s.mobileReporterBanner} />
 
         <Section title="문해력 워크지" more="더보기">
           <WorksheetList items={s.literacyWorksheets} accent="pink" emptyCta="문해력 워크지 알아보기" />

@@ -19,7 +19,7 @@ export default function ProfileCard({ user }: Props) {
             </span>
             <span>반갑습니다! 👋</span>
           </p>
-          <ul className={styles.badges}>
+          <ul className={`${styles.badges} ${styles.desktopBadges}`}>
             {user.badges.map((b) => (
               <li key={b.label}>
                 {b.kind === 'member' && (
@@ -40,6 +40,26 @@ export default function ProfileCard({ user }: Props) {
                 )}
               </li>
             ))}
+          </ul>
+          <ul className={`${styles.badges} ${styles.mobileBadges}`}>
+            {user.grade ? (
+              <>
+                <li><span className={`${styles.pill} ${styles.subscriber}`}>정기구독 회원</span></li>
+                <li><span className={`${styles.pill} ${styles.mobileFamily}`}>자녀</span></li>
+              </>
+            ) : (
+              user.badges.map((b) => (
+                <li key={b.label}>
+                  {b.kind === 'member' && <span className={`${styles.pill} ${styles.general}`}>{b.label}</span>}
+                  {b.kind === 'auth' && (
+                    <button className={styles.auth}>
+                      <img src={authBadgeIcon} width={24} height={24} alt="" />
+                      {b.label}
+                    </button>
+                  )}
+                </li>
+              ))
+            )}
           </ul>
         </div>
         {user.grade && <img className={styles.grade} src={silverBadge} width={120} height={120} alt="실버 등급" />}

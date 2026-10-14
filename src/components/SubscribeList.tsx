@@ -3,12 +3,21 @@ import EmptyCard from './EmptyCard'
 import mathCover from '../assets/figma-6953-32421/subscribe-math.png'
 import scienceCover from '../assets/figma-6953-32421/subscribe-science.png'
 import kidsCover from '../assets/figma-6953-32421/subscribe-kids.png'
+import mathLogo from '../assets/figma-mobile/logo-math.svg'
+import scienceLogo from '../assets/figma-mobile/logo-science.svg'
+import kidsLogo from '../assets/figma-mobile/logo-kids.svg'
 import styles from './SubscribeList.module.css'
 
 const COVERS: Record<string, { src: string; action: string; date: string; tone: string }> = {
   math: { src: mathCover, action: '곧 도착해요', date: '2024년 21호', tone: 'soon' },
   sci: { src: scienceCover, action: '재도전', date: '2024년 11호', tone: 'retry' },
   kids: { src: kidsCover, action: '퀴즈 풀기', date: '2024년 21호', tone: 'quiz' },
+}
+
+const MOBILE_LOGOS: Record<string, { src: string; width: number; height: number }> = {
+  math: { src: mathLogo, width: 52, height: 47.5 },
+  sci: { src: scienceLogo, width: 52, height: 20 },
+  kids: { src: kidsLogo, width: 42, height: 46 },
 }
 
 type Props = { items: Subscription[] }
@@ -27,19 +36,35 @@ export default function SubscribeList({ items }: Props) {
   }
 
   return (
-    <ul className={styles.list}>
-      {items.map((item) => {
-        const cover = COVERS[item.id]
-        return (
-          <li key={item.id} className={styles.item}>
-            <img className={styles.cover} src={cover.src} alt={`${item.name} ${cover.date} 표지`} />
-            <div className={styles.bottom}>
-              <button className={`${styles.btn} ${styles[cover.tone]}`}>{cover.action}</button>
-              <p className={styles.date}>{cover.date}</p>
-            </div>
-          </li>
-        )
-      })}
-    </ul>
+    <>
+      <ul className={`${styles.list} ${styles.desktopList}`}>
+        {items.map((item) => {
+          const cover = COVERS[item.id]
+          return (
+            <li key={item.id} className={styles.item}>
+              <img className={styles.cover} src={cover.src} alt={`${item.name} ${cover.date} 표지`} />
+              <div className={styles.bottom}>
+                <button className={`${styles.btn} ${styles[cover.tone]}`}>{cover.action}</button>
+                <p className={styles.date}>{cover.date}</p>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+      <ul className={`${styles.list} ${styles.mobileList}`}>
+        {items.map((item) => {
+          const logo = MOBILE_LOGOS[item.id]
+          return (
+            <li key={item.id} className={styles.mobileItem}>
+              <div className={styles.mobileThumb}>
+                <img src={logo.src} width={logo.width} height={logo.height} alt={item.name} />
+                <p className={styles.slogan}>{item.slogan[0]}<br />{item.slogan[1]}</p>
+              </div>
+              <button className={styles.mobileButton}>자세히 보기</button>
+            </li>
+          )
+        })}
+      </ul>
+    </>
   )
 }

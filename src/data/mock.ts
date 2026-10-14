@@ -22,6 +22,7 @@ export type Scenario = {
   subscriptions: Subscription[]
   /** 두 번째 배너: 기자증이 있으면 확인, 없으면 기자단 가입 유도 */
   reporterBanner: 'myCard' | 'join'
+  mobileReporterBanner: 'myCard' | 'join'
   literacyWorksheets: Worksheet[]
   bookmarkWorksheets: Worksheet[]
   children: Child[]
@@ -54,11 +55,12 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
       { id: 'kids', name: '어린이과학동아', slogan: ['웃기는 과학,', '똑똑한 만화'] },
     ],
     reporterBanner: 'join',
+    mobileReporterBanner: 'myCard',
     literacyWorksheets: worksheets,
     bookmarkWorksheets: worksheets,
     children: [
-      { id: 'c1', name: '홍첫째', status: '과학동아/진행 중', tone: 'blue' },
-      { id: 'c2', name: '홍둘째', status: '어린이과학동아/진행 중', tone: 'violet' },
+      { id: 'c1', name: '김첫째', status: '과학동아/진행 중', tone: 'blue' },
+      { id: 'c2', name: '김둘째', status: '어린이과학동아/진행 중', tone: 'violet' },
     ],
   },
   none: {
@@ -74,6 +76,7 @@ export const scenarios: Record<ScenarioKey, Scenario> = {
     },
     subscriptions: [],
     reporterBanner: 'join',
+    mobileReporterBanner: 'join',
     literacyWorksheets: [],
     bookmarkWorksheets: [],
     children: [],

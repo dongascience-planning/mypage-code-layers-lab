@@ -1,7 +1,7 @@
-/* 페이지 칼럼(최대 600px)의 오른쪽 아래에 고정 */
+/* 페이지 칼럼의 마지막 영역에 배치 */
 .fab {
-  position: fixed;
-  right: max(16px, calc((100vw - var(--page-max)) / 2 + 16px));
+  position: absolute;
+  right: 16px;
   bottom: 20px;
   z-index: 10;
   display: flex;

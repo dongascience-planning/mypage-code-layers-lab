@@ -53,9 +53,56 @@
   color: var(--neutral-900);
 }
 
-@media (max-width: 420px) {
-  .list { gap: 10px; }
-  .item { gap: 10px; }
-  .btn { height: 32px; padding: 4px; font-size: 12px; }
-  .date { font-size: 12px; }
+.mobileList { display: none; }
+
+.mobileItem {
+  display: flex;
+  flex: 0 1 100px;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.mobileThumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  height: 131px;
+  background: #f7f7f7;
+}
+
+.slogan {
+  width: min(96px, 100%);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #222;
+}
+
+.mobileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .desktopList { display: none; }
+  .mobileList { display: flex; gap: 10px; }
+}
+
+@media (max-width: 359px) {
+  .mobileButton { font-size: 12px; }
+  .slogan { font-size: 9px; }
 }
