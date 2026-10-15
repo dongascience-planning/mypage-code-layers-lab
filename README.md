@@ -4,7 +4,19 @@ Figma 코드 레이어(Code Layers) 실습용 경량 리포. 동아사이언스 
 
 - 원본 시안: 통합마이페이지 › 01. 메인 › `260825_자녀등록유도 및 수정` 섹션
 - 구현 범위: 모바일 메인(360px 기준), 넓은 화면은 600px 칼럼 가운데 정렬(PC 시안과 같은 구조)
-- 스택: Vite 5 + React 18 + TypeScript + CSS Modules. 외부 UI 라이브러리 없음
+- 스택: Vite 8 + React 19 + TypeScript. 마이페이지는 CSS Modules, 프로모션은 Tailwind CSS v4
+
+## 페이지 2개
+
+| 주소 | 화면 | 출처 |
+| --- | --- | --- |
+| `/` | 통합마이페이지 (260825 자녀등록유도) | Figma 시안 → 코드 |
+| `/promotion` | 동아사이언스 정기구독 프로모션 랜딩 (모바일·태블릿·PC) | Figma 코드 레이어 Build with code 결과를 내려받아 이관 |
+
+- Figma 코드 레이어 패널의 **Route**에 `/promotion` 입력하면 프로모션 화면
+- 두 페이지의 스타일은 주소별로 따로 불러와 섞이지 않음
+- 프로모션 이미지: 라이브 랜딩(dsstore.dongascience.com/promotion/landing)과 같은 이미지는 라이브 주소 사용, 나머지는 중복 제거 후 WebP 변환(`public/promotion-assets`, 원본 650MB → 약 16MB)
+- `src/promotion/generated/`는 Figma 자동 생성 파일. 직접 수정하지 않고 타입 검사에서 제외
 
 ## 데이터·이미지 원칙
 
