@@ -12,7 +12,10 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
+    // FIGMA_PUBLIC_URL: Figma 배포, PAGES_BASE: GitHub Pages(/mypage-code-layers-lab/), 그 외 '/'
+    base: process.env.FIGMA_PUBLIC_URL
+      ? `${process.env.FIGMA_PUBLIC_URL}/`
+      : process.env.PAGES_BASE || '/',
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
