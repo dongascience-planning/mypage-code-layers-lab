@@ -17,37 +17,37 @@ const scienceFeatureCards: DetailCard[] = [
     title: "아르테미스",
     description: "인류, 다시 달로 향하다\n아르테미스 프로젝트의 모든 것",
     badge: "우주 메가이슈",
-    image: `/promotion-assets/3515b6893e7b64c2.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/3515b6893e7b64c2.webp`,
   },
   {
     title: "그린란드",
     description: "기후위기의 최전선\n그린란드가 말하는 미래",
     badge: "기후 환경",
-    image: `/promotion-assets/4c01a32e37f18739.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/4c01a32e37f18739.webp`,
   },
   {
     title: "차세대 반도체",
     description: "AI 시대를 움직이는 힘\n차세대 반도체의 미래",
     badge: "기술 산업",
-    image: `/promotion-assets/e98115af1f8f75e6.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/e98115af1f8f75e6.webp`,
   },
   {
     title: "전파 망원경 SKA",
     description: "인류 최대 규모 프로젝트\n우주의 비밀을 듣다",
     badge: "우주 탐사",
-    image: `/promotion-assets/eef49c3716d7165d.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/eef49c3716d7165d.webp`,
   },
   {
     title: "희토류",
     description: "보이지 않는 핵심 자원\n희토류의 숨겨진 가치",
     badge: "기초과학 실생활",
-    image: `/promotion-assets/3742b6f23c966b3c.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/3742b6f23c966b3c.webp`,
   },
   {
     title: "둘리사우루스",
     description: "한반도에서 발견된 신종 공룡\n둘리사우루스의 의미",
     badge: "국내 이슈",
-    image: `/promotion-assets/624b5c0ed8819030.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/624b5c0ed8819030.webp`,
   },
 ];
 
@@ -55,32 +55,32 @@ const sciencePerspectiveCards: DetailCard[] = [
   {
     title: "미래 시사",
     description: "사회 이슈를 관통하는 과학의 해답",
-    image: `/promotion-assets/0b033ca836791949.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/0b033ca836791949.webp`,
   },
   {
     title: "심층 기획",
     description: "깊이 있는 주제 리포트",
-    image: `/promotion-assets/324afdad7ac0295b.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/324afdad7ac0295b.webp`,
   },
   {
     title: "미래 기술 트렌드",
     description: "AI, 반도체, 바이오 등 핵심 기술 흐름과 변화",
-    image: `/promotion-assets/babc9261de77eb87.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/babc9261de77eb87.webp`,
   },
   {
     title: "과학과 사람",
     description: "과학자의 연구와 삶을 통해 읽는 생생한 기록",
-    image: `/promotion-assets/5693121acddcd74a.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/5693121acddcd74a.webp`,
   },
   {
     title: "그래픽 뉴스",
     description: "복잡한 원리를 요약한 비주얼 콘텐츠",
-    image: `/promotion-assets/79449d85083c95ae.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/79449d85083c95ae.webp`,
   },
   {
     title: "진로와 커리어",
     description: "이공계 선배들이 제안하는 현실적인 로드맵",
-    image: `/promotion-assets/3fb8a33bba543cda.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/3fb8a33bba543cda.webp`,
   },
 ];
 
@@ -89,37 +89,37 @@ const mathCards: DetailCard[] = [
     title: "우와! 여기도 수학이?!",
     description: "뽑기에도 수학이 숨어있다?",
     badge: "확률",
-    image: `/promotion-assets/b88881ac3c37c4a7.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/b88881ac3c37c4a7.webp`,
   },
   {
     title: "아하! 만들기",
     description: "점프 개구리로 배우는 길이",
     badge: "길이·측정",
-    image: `/promotion-assets/bc2ce060710e0c5f.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/bc2ce060710e0c5f.webp`,
   },
   {
     title: "밸런스 게임",
     description: "4점 vs 7점, 뭐가 더 클까?",
     badge: "수 비교",
-    image: `/promotion-assets/2defd29c43a731a8.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/2defd29c43a731a8.webp`,
   },
   {
     title: "그림동화",
     description: "끝없이 커지는 수의 세계",
     badge: "수 개념",
-    image: `/promotion-assets/f92ec6b143c291aa.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/f92ec6b143c291aa.webp`,
   },
   {
     title: "학습만화",
     description: "수학으로 문제를 해결하는 힘",
     badge: "사고력",
-    image: `/promotion-assets/8e3d0eddf3006cdd.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/8e3d0eddf3006cdd.webp`,
   },
   {
     title: "수학 신들의 나라",
     description: "어렵던 개념이 이야기로 이해된다",
     badge: "수학용어",
-    image: `/promotion-assets/0c3df82604f1fbc4.webp`,
+    image: `${import.meta.env.BASE_URL}promotion-assets/0c3df82604f1fbc4.webp`,
   },
 ];
 
@@ -222,11 +222,11 @@ function SciencePanel() {
     <div className="mx-auto flex w-full max-w-[1080px] flex-col gap-12 pb-20 desktop:gap-[60px] desktop:px-10">
       <div className="grid gap-10 px-5 pt-10 tablet:grid-cols-2 desktop:gap-5 desktop:px-0">
         <FeatureSpread
-          image={`/promotion-assets/d1289ccb908e38f1.webp`}
+          image={`${import.meta.env.BASE_URL}promotion-assets/d1289ccb908e38f1.webp`}
           title={"호기심이 실력이 되는\n상위 1%의 선택"}
         />
         <FeatureSpread
-          image={`/promotion-assets/79449d85083c95ae.webp`}
+          image={`${import.meta.env.BASE_URL}promotion-assets/79449d85083c95ae.webp`}
           title={"40년간 쌓아온 과학 콘텐츠\n대한민국 대표 과학 잡지 과학동아"}
         />
       </div>
@@ -260,11 +260,11 @@ function MathPanel() {
     <div className="mx-auto flex w-full max-w-[1080px] flex-col gap-12 pb-20 desktop:gap-[60px] desktop:px-10">
       <div className="grid gap-10 px-5 pt-10 tablet:grid-cols-2 desktop:gap-5 desktop:px-0">
         <FeatureSpread
-          image={`/promotion-assets/77c125817aeaba60.webp`}
+          image={`${import.meta.env.BASE_URL}promotion-assets/77c125817aeaba60.webp`}
           title={"연산, 공식 암기보다 중요한 건\n생각하는 힘과 수학 자신감!"}
         />
         <FeatureSpread
-          image={`/promotion-assets/71471245e832c40b.webp`}
+          image={`${import.meta.env.BASE_URL}promotion-assets/71471245e832c40b.webp`}
           title={"읽다보면 자연스럽게\n수학 사고력을 키워주는 잡지"}
         />
       </div>
@@ -285,7 +285,7 @@ function MathPanel() {
             <img
               alt=""
               className="absolute bottom-0 right-0 h-full w-auto object-cover"
-              src={`/promotion-assets/3418117d1ccbae1a.webp`}
+              src={`${import.meta.env.BASE_URL}promotion-assets/3418117d1ccbae1a.webp`}
             />
             <p className="relative z-10 text-xl font-bold leading-7 tracking-[-0.04em] text-[#212121] desktop:text-2xl">
               재미있는 만들기 도안

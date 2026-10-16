@@ -13,7 +13,11 @@ Figma 코드 레이어(Code Layers) 실습용 경량 리포. 동아사이언스 
 | `/` | 통합마이페이지 (260825 자녀등록유도) | Figma 시안 → 코드 |
 | `/promotion` | 동아사이언스 정기구독 프로모션 랜딩 (모바일·태블릿·PC) | Figma 코드 레이어 Build with code 결과를 내려받아 이관 |
 
+- 웹에서 보기 (GitHub Pages, `main` 병합 시 자동 배포)
+  - 마이페이지: https://dongascience-planning.github.io/mypage-code-layers-lab/
+  - 프로모션: https://dongascience-planning.github.io/mypage-code-layers-lab/promotion/
 - Figma 코드 레이어 패널의 **Route**에 `/promotion` 입력하면 프로모션 화면
+- 코드에서 `public/` 파일 경로를 문자열로 쓸 때는 `${import.meta.env.BASE_URL}`를 앞에 붙임 (Pages는 `/mypage-code-layers-lab/` 아래에서 열림)
 - 두 페이지의 스타일은 주소별로 따로 불러와 섞이지 않음
 - 프로모션 이미지: 라이브 랜딩(dsstore.dongascience.com/promotion/landing)과 같은 이미지는 라이브 주소 사용, 나머지는 중복 제거 후 WebP 변환(`public/promotion-assets`, 원본 650MB → 약 16MB)
 - `src/promotion/generated/`는 Figma 자동 생성 파일. 직접 수정하지 않고 타입 검사에서 제외
